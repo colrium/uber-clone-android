@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/surge_value"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/half_circle"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center|bottom"
+        android:padding="8dp"
+        android:textColor="#FFF"
+        android:textSize="@dimen/text_medium"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEE"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="We have No Price Surge Policy"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="start"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/estimated_fare"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/estimated_fare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/dash"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrNonGeoPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="start"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="Non Geo Price"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/lbl_non_geo_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/dash"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="start"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/eta"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/eta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/dash"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="start"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/model"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/dash"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="start"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/peek_hour_charges"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <ImageView
+                android:id="@+id/peek_hour_charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/info" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_min_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/info"
+            android:drawablePadding="8dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:padding="8dp"
+            android:text="@string/your_final_fare_may_vary_upon_actual_distance_traveled_and_time_taken"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_9ssp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/info"
+            android:drawablePadding="8dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:padding="8dp"
+            android:text="@string/if_you_are_delighted"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_9ssp" />
+
+        <LinearLayout
+            android:id="@+id/lnrWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/use_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/use_wallet_amount"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/schedule_ride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/schedule_ride"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/ride_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/ride_now"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

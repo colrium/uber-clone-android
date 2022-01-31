@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.tranxit.enterprise"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 12
+        versionName "1.2"
+        multiDexEnabled true
+        applicationIdSuffix '.user'
+
+        resValue "string", "app_name", "Creuse"
+        resValue "string", "google_map_key", "AIzaSyB1Kfvlg6orolTJR4QIvC4hgiQJeQqNhlQ"
+        resValue "string", "google_directions_key", "AIzaSyCIO8Oe2F9RSPi-WOe0zdhsbxkJQSUOewc"
+        resValue "string", "FACEBOOK_APP_ID", "779758182401714"
+        resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "898888f208258c931431cfd920f5b721"
+        resValue "string", "default_notification_channel_id", "fcm_default_channel"
+        resValue "string", "google_signin_server_client_id", "258315448228-t24jqma149016sop3vil5k69pma4bf89.apps.googleusercontent.com"   //"530146385772-6of3193evm8kpnfa4e15mka2ft1boona.apps.googleusercontent.com"
+
+        buildConfigField "String", "FCM_SERRVER_KEY", '"AIzaSyDWDA9aW7Cva-Yb70UQ31fZ0uvbd269qK8"'
+        buildConfigField "String", "CLIENT_SECRET", '"lDrDHYYmZwxfYFM3jcRJK1lulzFyqOXms7GYjvKU"'
+        buildConfigField "String", "CLIENT_ID", '"3"'
+        buildConfigField "String", "DEVICE_TYPE", '"android"'
+        buildConfigField "String", "STRIPE_PK", '"pk_test_0G4SKYMm8dK6kgayCPwKWTXy"'
+        buildConfigField "String", "BASE_URL", '"http://10.0.2.2:8000/"'
+        buildConfigField "String", "BASE_IMAGE_URL", '"http://10.0.2.2:8000/storage/"'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("jks/tranxit_enterprise_android_user.jks")
+            storePassword "tranxit_enterprise_android_user"
+            keyAlias "tranxit_enterprise_android_user"
+            keyPassword "tranxit_enterprise_android_user"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+
+    implementation 'com.facebook.android:facebook-login:4.39.0'
+
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.maps:google-maps-services:0.2.7'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    // New Places SDK Client for Android
+    implementation 'com.google.android.libraries.places:places:1.0.0'
+
+    //Retrofit
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation "com.squareup.okhttp3:okhttp:3.11.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+    implementation 'com.braintreepayments:card-form:3.5.0'
+    implementation 'com.stripe:stripe-android:8.0.0'
+
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+
+    implementation 'me.philio:pinentryview:1.0.6'
+
+    /*dimen*/
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+
+    implementation 'com.android.volley:volley:1.1.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
